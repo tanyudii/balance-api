@@ -1,0 +1,30 @@
+CREATE TABLE accounts (
+    id BIGSERIAL PRIMARY KEY,
+    nama VARCHAR(255) NOT NULL,
+    nik VARCHAR(20) UNIQUE NOT NULL,
+    no_hp VARCHAR(15) UNIQUE NOT NULL,
+    no_rekening VARCHAR(30) UNIQUE NOT NULL,
+    saldo NUMERIC(15,2) DEFAULT 0 NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE OR REPLACE FUNCTION set_updated_at_on_accounts()
+RETURNS TRIGGER AS $$
+BEGIN
+    NEW.updated_at = NOW();
+RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER trigger_update_accounts_updated_at
+    BEFORE UPDATE ON accounts
+    FOR EACH ROW
+    EXECUTE FUNCTION set_updated_at_on_accounts();
+
+CREATE TABLE account_mutations (
+    id SERIAL PRIMARY KEY,
+    account_id BIGINT NOT NULL REFERENCES accounts(id) ON DELETE CASCADE,
+    amount NUMERIC(15,2) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
+);

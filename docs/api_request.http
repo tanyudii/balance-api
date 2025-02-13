@@ -1,0 +1,32 @@
+### POST register
+POST http://localhost/daftar
+Content-Type: application/json
+
+{
+  "nama": "John Doe",
+  "nik": "1234567890123002",
+  "no_hp": "081122334002"
+}
+
+### GET cek saldo
+GET http://localhost/saldo/7610881951
+
+### POST menabung
+POST http://localhost/tabung
+Content-Type: application/json
+
+{
+  "no_rekening": "8040614997",
+  "nominal": 100
+}
+
+### POST tarik saldo
+POST http://localhost/tarik
+Content-Type: application/json
+
+{
+  "no_rekening": "8040614997",
+  "nominal": 100
+}
+
+###

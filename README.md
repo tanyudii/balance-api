@@ -2,6 +2,9 @@
 
 A simple balance management API using **PostgreSQL**.
 
+## Demo Project 🎬
+[Demo Video](https://drive.google.com/file/d/1G7zsAGkOJiLbQ_Qx_NnvZb9U7UH1Evek/view?usp=sharing)
+
 ## **🚀 Getting Started**
 
 ### **1. Clone the Repository**

@@ -44,7 +44,7 @@ func (h *AccountAPI) Daftar(c echo.Context) error {
 		return api.EchoErrorResponse(c, err)
 	}
 
-	return api.EchoResponse(c, 201, map[string]string{
+	return api.EchoResponse(c, 200, map[string]string{
 		"no_rekening": noRekening,
 	})
 }

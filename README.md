@@ -3,8 +3,8 @@
 A simple balance management API using **PostgreSQL**.
 
 ## Demo Project 🎬
-* [Demo Video (G-Drive)](https://drive.google.com/file/d/1G7zsAGkOJiLbQ_Qx_NnvZb9U7UH1Evek/view?usp=sharing)
-* [Demo Video (Github)](https://github.com/tanyudii/balance-api/blob/main/docs/Balance%20API%20Recording.mp4)
+* [Demo Video (G-Drive)](https://drive.google.com/file/d/1YvA4103FcINrooEnKjl6IJp2JBSpb3o6/view?usp=sharing)
+* [Demo Video (Without Explanation) (Github)](https://github.com/tanyudii/balance-api/blob/main/docs/Balance%20API%20Recording.mp4)
 
 
 ## **🚀 Getting Started**
